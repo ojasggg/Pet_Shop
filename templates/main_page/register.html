@@ -1,0 +1,74 @@
+{% extends 'main_page/base.html' %}
+
+{% block title %} Register{% endblock title %}
+
+{% block body %} 
+{% load static %}
+
+<section class="form my-4 mx-5">
+    <div class="container-fluid" >
+        <div class="row no-gutters" id="login-cont">
+            
+            <div class="col-lg-5" id="login-img">
+                <img src="{% static 'Extra_pictures/1.jpg' %}" class="img-fluid" alt="Image Error">
+            </div>
+
+            <div class="col-lg-7 px-5 pt-5 mb-3">
+                <h1>SIGN UP</h1>
+                <form action="/home/index/register/" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-lg-7 mt-0 mb-2">
+                            <label for="name">Full-name</label><span id="needed">*</span>
+                            <input type="text" placeholder="Full-Name" name="name" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-lg-7 mt-0 mb-2">
+                            <label for="Username">Username</label><span id="needed">*</span>
+                            <input type="text" placeholder="Username" name="username" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+
+                    <div class="form-row mt-0 mb-2 ">
+                        <div class="col-lg-7">
+                            <label for="email">Email-Address</label><span id="needed">*</span>
+                            <input type="email" placeholder="Email-Address" name="email" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row mt-0 mb-2">
+                        <div class="col-lg-7">
+                            <label for="email">Current Address</label><span id="needed">*</span>
+                            <input type="text" placeholder="Current Address" name="address" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row mt-0 mb-2">
+                        <div class="col-lg-7">
+                            <label for="phone">Phone number</label><span id="needed">*</span>
+                            <input type="phone" placeholder="Phone number" name="phone" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row mt-0 mb-2">
+                        <div class="col-lg-7">
+                            <label for="password">Password</label><span id="needed">*</span>
+                            <input type="password" placeholder="********" name="password" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row mt-0 mb-2">
+                        <div class="col-lg-7">
+                            <label for="password">Confirm-password</label><span id="needed">*</span>
+                            <input type="password" placeholder="********" name="confirm_password" class="form-control my-1 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row mt-0 mb-2">
+                        <div class="col-lg-7">
+                            <button type="submit" class="btn mt-3 mb-5" id="login-btn">Sign up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock body %}

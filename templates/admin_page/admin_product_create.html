@@ -1,0 +1,40 @@
+{% extends 'admin_page/admin_base.html' %}
+
+{% block title %} Customer {% endblock title %}
+
+{% block content%}
+
+<div class="container">
+    <div class="h1">
+        <h1>Create Product</h1>
+    </div>
+    <div class="col-lg-10 " id="create">
+
+        <form action="/adm/index/product/createItem/create/" method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col-lg-7 mt-0 mb-2">
+                    <label for="title">Product title</label><span id="needed">*</span>
+                    <input type="text" placeholder="Product title" name="title" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-7 mt-0 mb-2">
+                    <label for="price">Price</label><span id="needed">*</span>
+                    <input type="text" placeholder="$00000000" name="price" class="form-control my-1 p-4">
+                </div>
+            </div>
+
+            <div class="form-row mt-0 mb-2 ">
+                <div class="col-lg-7">
+                    <label for="image">Image url</label><span id="needed">*</span>
+                    <input type="text" placeholder="Image name" name="image" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <button type="submit" class="btn btn-primary mt-3 mb-5" id="login-btn">Create</button>
+                </div>
+            </div>
+        </form> 
+{% endblock content%}

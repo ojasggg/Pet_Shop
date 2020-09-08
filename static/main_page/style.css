@@ -1,0 +1,344 @@
+*{
+
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background:#00000012;
+}
+
+/* Style for the Overall Navbar*/
+.img-navlogo{
+
+    height: 20px;
+    width: 20px;
+
+}
+
+.img-navlogo:hover{
+
+    background-color: white;
+}
+
+#navbar{
+
+    background: #e1720db5;
+}
+
+ul{
+
+    margin: auto;
+    list-style-type: none;
+}
+
+li{
+
+    margin: 10px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#img-logo {
+
+    width : 100px;
+    height: 60px;
+    
+}
+
+.carousel-inner img {
+    width : 100%;
+}
+
+#right-nav,li{
+    float: left;
+    padding-left: 5%;
+}
+
+.fa.fa-user{
+    font-size: 20px;
+}
+
+.fa.fa-shopping-cart{
+    font-size: 20px;
+}
+
+.fa.fa-sear20{
+    font-size: 20px;
+}
+
+
+.fa.fa-user:hover{
+    
+    color: #ff523b;
+}
+.fa.fa-shopping-cart:hover{
+    
+    color: #ff523b;
+}
+.fa.fa-search:hover{
+    
+    color: #ff523b;
+}
+
+/* End of Style for the Overall Navbar*/
+
+
+
+/* Style for Carousel Animaation Image */
+
+.carousel-inner h2{
+    font-family: 'Merriweather', serif;
+    color: #b9b2afed;
+    font-size: 70px;
+}
+
+.carousel-inner p{
+    font-family: 'Lobster', cursive;
+    color: #b9b2afed;
+    font-size: 40px;
+}
+
+/* End of Style for Carousel Animaaation Image */
+
+/* Style for the Feature products */
+
+#products{
+    background: #b57842e0;
+}
+
+.container .row{
+    margin-bottom: 50px;
+}
+
+.container .card{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.container .card:hover{
+    transform: translateY(-10px);
+}
+
+
+.card-text a,span{
+    margin-left: 10px;
+}
+
+.card .img-container img{
+    height: 400px;
+}
+
+.product-title{
+    color: #b9b2afed;
+
+}
+
+/* Testimonial */
+
+.testimonial{
+    padding-top: 100px;
+    background:#e6e2e2;
+
+}
+
+.testimonial col-sm{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial .col-sm img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+
+}
+
+.testimonial .col-sm:hover{
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+
+.col-sm p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.testimonial .col-sm h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+
+}
+
+.rating .fa{
+    color: #ff523b;
+}
+
+/* End of testimonial styling */
+
+/* Footer padding */
+
+#footer-h3{
+    color: #fff;
+    font-size : 30px;
+
+} 
+
+#footer-p{
+    color: #fff;
+    font-size : 13px;
+    text-align: center;
+
+}
+
+#footer-ul{
+    float: left;
+}
+
+.footer-top{
+    background:#111;
+    padding:80px 0;
+
+}
+
+
+/* Style for login page */
+#login-cont {
+    background:#e8e2e0;
+    border-radius : 30px;
+}
+
+.col-lg-7 h1{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+
+}
+
+#login-img img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#login-btn{
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    background-color:black;
+    color: #fff;
+    font-weight: bold;
+}
+
+#login-btn:hover{
+    background: #fff;
+    border: 1px solid;
+    color: #111;
+}
+
+.col-lg-7 p{
+    font-family: 'Merriweather', serif;
+    font-weight: none;
+}
+/* End of styling of Login page */
+
+/*Style for About Page */
+
+
+#pic{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.slider-height2 {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img-1{
+    width: 100%;
+}
+
+#center{
+    margin-top: 20px;
+}
+
+#abt-cont{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+}
+
+#abt-cont .box{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #8bbcc8e6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin:20px;
+    box-sizing:border-box;
+    overflow: hidden;
+
+}
+
+#abt-cont .box .icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background:#000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0 auto;
+    border-radius: 50%;
+}
+
+.content h3 {
+
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+.content p {
+
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    
+}
+
+#needed{
+    color:red;
+}
+
+
+
+
+

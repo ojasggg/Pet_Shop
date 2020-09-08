@@ -1,0 +1,32 @@
+{% extends 'admin_page/admin_base.html' %}
+
+{% block title %} Feedback {% endblock title %}
+
+{% block content%}
+<div class="container" id="padding">
+    <h1 class="h1">Feedback page</h1>
+    <table class="table" >
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>messege</th>
+            <th>date</th>
+        {% for b in msg %}
+        <tr>
+            <td>{{b.id}}</td>
+            <td>{{b.name}}</td>
+            <td>{{b.email}}</td>
+            <td>{{b.phone}}</td>
+            <td>{{b.messege}}</td>
+            <td>{{b.date}}</td>
+            <th>
+
+                <a href="/adm/index/feedback/delete/{{b.id}}">Delete</a>
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock content%}

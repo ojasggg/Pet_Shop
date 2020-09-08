@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock title%}| Admin-base</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admin_pages/admstyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Roboto+Mono:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Open+Sans:wght@600&family=Roboto+Mono:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    {% block body%} {% endblock body %}
+    <div class="container-fliud">
+
+        <div class="col-lg-2">
+            <div class="sidenav">
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="/adm/index/">
+                        <h4>Admin Page</h4>
+                    </a>
+                    <a href="/adm/index/product/">Product</a>
+                    <a href="/adm/index/customer/">Customer</a>
+                    <a href="/adm/index/feedback/">Feedbacks</a>
+                </nav>
+            </div>
+        </div>
+        {% if admmessages %}
+        {% for message in admmessages %}
+        <div class="alert alert-{{ admessage.tags }} alert-dismissible fade show my-0 " role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="col-lg-10 mx=10">
+
+            {% block content%} {% endblock content %}
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

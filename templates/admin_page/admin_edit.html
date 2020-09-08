@@ -1,0 +1,68 @@
+{% extends 'admin_page/admin_base.html' %}
+
+{% block title %} Customer {% endblock title %}
+
+{% block content %} 
+<div class="container">
+    <div class="h1">
+        <h1>Create User</h1>
+    </div>
+    <div class="col-lg-10 " id="create">
+
+        <form action="update/{{user.p_id}}" method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col-lg-7 mt-0 mb-2">
+                    <label for="name">Full-name</label><span id="needed">*</span>
+                    <input type="text" name="name" value="{{user.name}}" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-7 mt-0 mb-2">
+                    <label for="Username">Username</label><span id="needed">*</span>
+                    <input type="text" value="{{user.username}}" name="username" class="form-control my-1 p-4">
+                </div>
+            </div>
+
+            <div class="form-row mt-0 mb-2 ">
+                <div class="col-lg-7">
+                    <label for="email">Email-Address</label><span id="needed">*</span>
+                    <input type="email" value="{{user.email}}" name="email" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <label for="email">Current Address</label><span id="needed">*</span>
+                    <input type="text" value="{{user.address}}"v name="address" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <label for="phone">Phone number</label><span id="needed">*</span>
+                    <input type="phone" value="{{user.phone}}"v name="phone" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <label for="password">Password</label><span id="needed">*</span>
+                    <input type="password" value="{{user.password}}" name="password" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <label for="password">Confirm-password</label><span id="needed">*</span>
+                    <input type="password" value="{{user.confirm_password}}" name="confirm_password" class="form-control my-1 p-4">
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <button type="submit" class="btn mt-3 mb-5" id="login-btn">Update</button>
+                </div>
+            </div>
+            <div class="form-row mt-0 mb-2">
+                <div class="col-lg-7">
+                    <button type="submit" class="btn mt-3 mb-5" id="login-btn"><a href="/adm/index/customer">Back</a></button>
+                </div>
+            </div>
+        </form> 
+{% endblock content %}

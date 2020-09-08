@@ -1,0 +1,45 @@
+{% extends 'main_page/base.html' %}
+
+{% block title %} Login{% endblock title %}
+
+{% block body %} 
+{% load static %}s
+<section class="form my-4 mx-5">
+    <div class="container-fluid" >
+        <div class="row no-gutters" id="login-cont">
+            
+            <div class="col-lg-5" id="login-img">
+                <img src="{% static 'Extra_pictures/1.jpg'%}" class="img-fluid" alt="Image Error">
+            </div>
+
+            <div class="col-lg-7 px-5 pt-5">
+                <h1>LOGIN</h1>
+                <h4>Sign in to your account</h4>
+                <form method="POST" action="/home/index/login/">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <label for="username">Username</label><span id="needed">*</span><span class="message"></span>
+                            <input type="text" placeholder="Username" name="username" class="form-control my-3 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <label for="password">Password</label><span id="needed">*</span><span class="message"></span>
+                            <input type="password" placeholder="*********" name="password" class="form-control my-3 p-4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <button type="submit" onclick="return validate()" class="btn mt-3 mb-5" id="login-btn">Login</button>
+                        </div>
+                    </div>
+                
+                    <p>Don't have an account? <a href="/home/index/register/">Register here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock body %}

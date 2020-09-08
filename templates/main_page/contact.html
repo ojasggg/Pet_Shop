@@ -1,0 +1,91 @@
+{% extends 'main_page/base.html' %}
+
+{% block title %} Contact{% endblock title %}
+
+{% block body %} 
+<div class="slider-area ">
+    <div class="single-slider slider-height2 d-flex align-items-center">
+        <div class="container-fluid my-0 py-0">
+            <div class="row" id="pic">
+                <div class="col-xl-12">
+                    
+                    <div class="hero-cap text-center " id="center">
+                        <h2 class="m-10">Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Direct contact -->
+<div class="container">
+    <div class="hero-cap text-center my-5">
+        <h2>Direct Contact</h2>
+    </div>
+    <form method="POST" action="/home/index/contact/">
+    {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label><span id="needed">*</span>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address</label><span id="needed">*</span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="123456789">
+        </div>
+        <div class="form-group">
+            <label for="messege">Your Messege</label>
+            <textarea class="form-control" id="messege" name="messege" rows="3"
+                placeholder="Type your messege..."></textarea>
+        </div>
+        <button type="submit " class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<div class="container-fluid text-center my-20">
+    <h1>OR</h1>
+</div>
+
+<!-- Start from Indirect contact -->
+
+<div class="container-fluid" id="abt-cont">
+    <div class="box">
+        <div class="icon">
+            01
+        </div>
+        <div class="content">
+            <h3>Email</h3>
+            <p>Send us an email with your query to support@petshop.com We aim to respond within hours (Monday - Friday 9.30am-5.30pm). If this email related to an order, please ensure that you state your order number which will have been sent to you in a confirmation email when the order was placed. </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icon">
+            02
+        </div>
+        <div class="content">
+            <h3>Phone</h3>
+            <p>If you wish to contact us by phone, please call us on +977-123456789. Our helpline is open between (10am-4pm) Monday to Friday </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icon">
+            03
+        </div>
+        <div class="content">
+            <h3>Posts</h3>
+            <p>Alternatively, you can send us a letter to the following address:
+
+                Pets Shop
+                Pet shop Ltd
+                New Baneshwor
+                123 xyz-street
+                Kathmandu
+                Nepal  </p>
+        </div>
+    </div>
+</div>
+{%endblock body %}
